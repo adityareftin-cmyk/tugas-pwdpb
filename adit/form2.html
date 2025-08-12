@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pendaftaran </title>
+    <style>
+        body {
+            /* Font paling ikonik dari era 90-an */
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            /* Latar belakang dengan warna cerah */
+            background-color: #008080; /* Teal */
+            color: #FFFF00; /* Teks Kuning */
+        }
+        
+        .container {
+            /* Form diletakkan di dalam tabel dengan background kontras */
+            background-color: #C0C0C0; /* Abu-abu silver */
+            border: 4px ridge #FFFFFF;
+            padding: 10px;
+            margin: auto;
+            width: 600px;
+        }
+
+        /* Border tebal untuk media */
+        .display-media img,
+        .display-media video {
+            max-width: 100%; 
+            height: auto;
+            border: 5px double #FF00FF; /* Magenta */
+        }
+        
+        /* Teks berjalan di dalam marquee */
+        .header-marquee {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #000080; /* Biru Navy */
+            padding: 5px;
+        }
+        
+        /* Menggunakan tabel untuk layout form, sangat 90-an! */
+        .form-table {
+            width: 100%;
+            color: #000000; /* Teks hitam agar terbaca */
+        }
+
+        .form-table td {
+            padding: 8px;
+        }
+        
+        .form-table label {
+            font-weight: bold;
+            color: #000080; /* Biru Navy */
+        }
+
+        /* Input dengan efek 3D "terbenam" */
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 2px inset #FFFFFF;
+            box-sizing: border-box;
+        }
+
+        /* Tombol dengan efek 3D "timbul" */
+        .btn {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-weight: bold;
+            padding: 8px 15px;
+            border: 2px outset #FFFFFF;
+            cursor: pointer;
+        }
+        .btn-submit {
+            background-color: #00FF00; /* Hijau Limau */
+            color: #000000;
+        }
+        .btn-reset {
+            background-color: #FF0000; /* Merah */
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="container">
+        <tr>
+            <td colspan="2">
+                <marquee class="header-marquee" behavior="scroll" direction="left">
+                    SELAMAT DATANG CALON PENDAFTAR BARU!!! -- AYO ISI FORM DI BAWAH INI -- JANGAN SAMPAI KETINGGALAN!! --
+                </marquee>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" class="display-media" align="center">
+                <img src="ayam.jpg" alt="Contoh gambar header" style="margin-bottom: 15px;">
+                <video src="naruto.mp4" controls></video>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2">
+                <form>
+                    <input type="hidden" name="user_id" value="12345">
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="nama">NAMA KAMU:</label></td>
+                            <td><input type="text" id="nama" name="nama"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">PASSWORD RAHASIA:</label></td>
+                            <td><input type="password" id="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="alamat">ALAMAT TINGGAL:</label></td>
+                            <td><textarea id="alamat" name="alamat" rows="4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="berkas">UPLOAD FOTO GAYAMU:</label></td>
+                            <td><input type="file" id="berkas" name="foto" accept="image/*"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="video-upload">UPLOAD VIDEO AKSIMU:</label></td>
+                            <td><input type="file" id="video-upload" name="video" accept="video/*"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="right">
+                                <input type="reset" value="ULANGI LAGI" class="btn btn-reset">
+                                <input type="submit" value="KIRIM SEKARANG!" class="btn btn-submit">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
